@@ -1,0 +1,18 @@
+{% extends "mmp_app/base.html" %}
+{% block body_block %}
+<div class="container">
+	<div class="jumbotron">
+       		<h1>Welcome to the Portal</h1>
+       		<a class="btn btn-primary" href="{% url 'mmp_app:faculty_logout'%}" role="button">Logout</a>
+  </div>
+  <h3>Faculty Name : {{ name }}</h3>
+  <h3>Faculty Department : {{ dept }}</h3>
+  <h3>Courses:</h3>
+  </div>
+  <h3>Faculty Name : {{ name }}</h3>
+  <h3>Faculty Department : {{ dept }}</h3>
+  {% for course in courses %}
+    <h3>{{ course }}</h3>
+  {% endfor %}
+</div>
+{% endblock %}

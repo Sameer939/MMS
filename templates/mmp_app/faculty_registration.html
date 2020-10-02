@@ -1,0 +1,25 @@
+{% extends "mmp_app/base.html" %}
+
+{%block body_block%}
+<div class="jumbotron">
+	<div class="container">
+		{% if registered %}
+		<h1>You are succefully registered! Please Login.</h1>
+	{%else%}
+		<h1>Faculty Register here!</h1>
+		<br>
+		<form enctype="multipart/form-data" method="post">
+			{% csrf_token %}
+			{{ user_form.as_p }}
+			{{ profile_form.as_p}}
+			<input type="submit" name="" value="Register">
+	{% endif %}
+		</form>
+	</div>
+	<br>
+	<div class="container">
+			<a class="btn btn-primary" href="{% url 'mmp_app:faculty_login'%}" role="button">Login Here</a>
+	</div>
+</div>
+
+{%endblock%}
