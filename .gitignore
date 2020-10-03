@@ -5,7 +5,7 @@ client_secrets.json
 credentials.json
 
 #Files
-Files/
+Files/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
