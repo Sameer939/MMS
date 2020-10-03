@@ -4,7 +4,8 @@ settings.yaml
 client_secrets.json
 credentials.json
 
-
+#Files
+Files/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
