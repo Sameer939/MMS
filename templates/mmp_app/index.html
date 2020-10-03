@@ -1,0 +1,22 @@
+{% extends "mmp_app/base.html" %}
+
+{%block body_block%}
+<div class="container">
+	<div class="jumbotron">
+		{% if user.is_authenticated %}
+       		<h1>Welcome to Material Management Portal Homepage!</h1>
+       		<a class="btn btn-primary" href="{% url 'mmp_app:student_logout'%}" role="button">Logout</a>
+      {% else %}
+      	<h1>Please Select Your Category :</h1>
+       <div class="container">
+					<a class="btn btn-primary btn-lg" href="{% url 'mmp_app:faculty_register'%}" role="button">FACULTY</a>
+				</div>
+				<br>
+				<div class="container">
+					<a class="btn btn-primary btn-lg" href="{% url 'mmp_app:student_register'%}" role="button">STUDENT</a>
+				</div>
+          {% endif %}
+		
+	</div>
+</div>
+{%endblock%}
